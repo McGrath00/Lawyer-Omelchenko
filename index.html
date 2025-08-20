@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="#" class="logo">
+                    <img src="images/logo.svg" alt="logo" class="logo__img">
+                </a>
+                <nav class="menu">
+                    <ul class="menu__list">
+                        <li class="menu__list-item"><a href="#" class="menu__list-link">О нас</a>
+                        </li>
+                        <li class="menu__list-item"><a href="#" class="menu__list-link">Контакты</a>
+                        </li>
+                        <li class="menu__list-item"><a href="#" class="menu__list-link">Услуги и цены</a>
+                        </li>
+                        <li class="menu__list-item"><a href="#" class="menu__list-link">Отзывы</a>
+                        </li>
+                    </ul>
+                </nav>
+              <a href="login.html">  <button class="header__btn">
+                    
+                    Личный кабинет  
+                    <svg width="20" height="20" viewBox="0 0 48 48" fill="white" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M24 24C29.5228 24 34 19.5228 34 14C34 8.47715 29.5228 4 24 4C18.4772 4 14 8.47715 14 14C14 19.5228 18.4772 24 24 24Z" fill="white"/>
+                        <path d="M24 28C15.1634 28 8 35.1634 8 44C8 44.5523 8.44772 45 9 45H39C39.5523 45 40 44.5523 40 44C40 35.1634 32.8366 28 24 28Z" fill="white"/>
+                      </svg>
+                  </button>
+                  </a>
+                  
+            </div>
+        </div>
+    </header>
+        <main class="main">
+            <section class="top">
+                <div class="container">
+                    <h1 class="title">
+                        Юридическое бюро Айнур Омельченко <br>
+                        Защита ваших прав
+                    </h1>
+                    <p class="title__text">
+                        Автоюрист, возврат долгов, возмещение ущерба и другое
+                    </p>
+                    <a href="#" class="top__link" id="consultationBtn">
+                        Получить консультацию
+                    </a>
+                    
+                </div>
+                
+                
+<!-- Модальное окно -->
+<div id="consultationModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2 class="modal-title">Напишите нам и мы обсудим ваш вопрос</h2>
+
+        <form id="consultationForm" class="consultation-form">
+            <!-- Первая строка: Имя, Email, Телефон -->
+            <div class="form-row">
+                <div class="form-col">
+                    <input type="text" id="name" name="name" placeholder="Имя" required>
+                </div>
+                <div class="form-col">
+                    <input type="email" id="email" name="email" placeholder="Email" required>
+                </div>
+                <div class="form-col">
+                    <input type="tel" id="phone" name="phone" placeholder="+7 (999) 999-99-99" pattern="\+7\s*\(\d{3}\)\s*\d{3}-\d{2}-\d{2}" required>
+                    <div id="phoneError" class="error-message"></div>
+                </div>
+                
+            </div>
+
+            <!-- Вторая строка: Сообщение -->
+            <div class="message-field">
+                <label for="message">Сообщение</label>
+                <textarea id="message" name="message" rows="4" placeholder="Введите сообщение"></textarea>
+            </div>
+
+            <!-- Политика конфиденциальности -->
+            <p class="privacy-policy">
+                Нажав на кнопку отправить, соглашаюсь на обработку персональных данных
+            </p>
+
+            <!-- Кнопка отправки -->
+            <button type="submit" class="submit-btn">Отправить</button>
+        </form>
+    </div>
+</div>
+
+                <div class="scroll-down-arrow">
+                    <img src="images/arrow-down.svg" alt="Scroll down">
+                  </div>
+      
+            </section>
+            <div class="wrappers" style="background-image: url(images/fon.jpg);">
+            </div>
+            
+            <section class="services">
+                <section class="services">
+                    <div class="container">
+                      <h2 class="section-title">Наши Услуги</h2>
+                      <p class="section-subtitle">Квалифицированная помощь в решении юридических вопросов</p>
+                  
+                      <ul class="services__list">
+                        <li class="services__item">
+                          <span class="services__description">
+                            Автоюрист - Помощь в решении правовых вопросов, связанных с транспортными средствами от споров со страховыми до возврата прав.
+                          </span>
+                          <span class="services__price">₽25.000</span>
+                        </li>
+                  
+                        <li class="services__item">
+                          <span class="services__description">
+                            Возврат долгов - Действуем в рамках закона для возврата ваших средств и урегулирования долговых обязательств.
+                          </span>
+                          <span class="services__price">₽15.000</span>
+                        </li>
+                        <li class="services__item">
+                            <span class="services__description">
+                                Возмещение ущерба - Помощь в получении компенсации при повреждении<br>
+                                имущества или причинении вреда здоровью.
+                            </span>
+                            <span class="services__price">₽20.000</span>
+                          </li>
+                          <li class="services__item">
+                            <span class="services__description">
+                                Банкротство - Сопровождение процедур банкротства для физических<br> 
+                                и юридических лиц.
+                            </span>
+                            <span class="services__price">₽30.000</span>
+                          </li>
+                          <li class="services__item">
+                            <span class="services__description">
+                                Защита прав потребителей - Оказываем помощь в отстаивании ваших прав
+                                как потребителя товаров и услуг.
+                            </span>
+                            <span class="services__price">₽10.000</span>
+                          </li>
+                          <li class="services__item">
+                            <span class="services__description">
+                                Решение имущественных споров - Юридическое сопровождение при
+                                возникновении споров, связанных с имуществом.
+                            </span>
+                            <span class="services__price">₽18.000</span>
+                          </li>
+                        
+                      </ul>
+                 </div>
+            </section>
+
+            <section class="advantages">
+                <div class="container">
+                  <!-- Заголовок и подзаголовок -->
+                  <div class="section-header">
+                    <h2 class="section-title">Наши Преимущества</h2>
+                    <p class="section-subtitle">
+                      Юридическое бюро Айнур Омельченко предоставляет профессиональные услуги в области права, гарантируя надёжность и качество.
+                    </p>
+                  </div>
+              
+                  <!-- Список преимуществ -->
+                  <div class="advantages__list">
+                    
+                    <div class="advantage-item">
+                      <div class="advantage-icon">
+                        <span>%</span>
+                      </div>
+                      <h3 class="advantage-title">Автоюрист</h3>
+                      <p class="advantage-description">
+                        Комплексная поддержка при решении любых вопросов, связанных с транспортными средствами и ДТП.
+                      </p>
+                    </div>
+              
+                    
+                    <div class="advantage-item">
+                      <div class="advantage-icon">
+                        <span>%</span>
+                      </div>
+                      <h3 class="advantage-title">Возврат долгов</h3>
+                      <p class="advantage-description">
+                        Эффективное взыскание задолженностей с должников с соблюдением всех юридических процедур.
+                      </p>
+                    </div>
+              
+                    
+                    <div class="advantage-item">
+                      <div class="advantage-icon">
+                        <span>%</span>
+                      </div>
+                      <h3 class="advantage-title">Уголовное право</h3>
+                      <p class="advantage-description">
+                        Защита прав и интересов клиентов в рамках уголовного судопроизводства.
+                      </p>
+                    </div>
+              
+            
+                    <div class="advantage-item">
+                      <div class="advantage-icon">
+                        <span>%</span>
+                      </div>
+                      <h3 class="advantage-title">Семейное право</h3>
+                      <p class="advantage-description">
+                        Решение споров, связанных с браком, разводом, алиментами и опекой.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </section>
+<section>
+              <!-- Блок с отзывами -->
+
+    
+
+
+</section>
+        </main>
+
+
+
+        <footer class="footer">
+            <div class="container">
+                <nav class="footer__menu">
+                    <ul class="footer__menu-list">
+
+
+                    </ul>
+                    <ul class="footer__menu-list">
+
+                    </ul>
+                    <ul class="footer__menu-list">
+
+                    </ul>
+                    <ul class="footer__menu-list">
+                     
+                    </ul>
+                </nav>
+            </div>
+        </footer>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
